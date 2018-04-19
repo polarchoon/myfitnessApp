@@ -1,18 +1,60 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Home</ion-title>
+    
+    <ion-buttons end>
+      <button ion-button icon-only (click)="logout()">
+        <ion-icon name="md-log-out"></ion-icon>
+      </button>
+  </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content class="card-background-page">
+  <!-- <ion-buttons end>
+    <button ion-button icon-only (click)="goToProfile()">
+      <ion-icon name="person"></ion-icon>
+    </button>
+</ion-buttons> -->
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+    <ion-card>
+      <img src="assets/imgs/Penguins.jpg"/>
+      <ion-footer class="card-title">Join Now</ion-footer>
+    </ion-card>
+  
+    <ion-card (click)="goToFindClass()">
+      <img src="assets/imgs/Penguins.jpg"/>
+      <ion-footer class="card-title">Class</ion-footer>
+    </ion-card>
+  
+    <ion-card (click)="goToSocial()">
+      <img src="assets/imgs/Penguins.jpg"/>
+      <ion-footer class="card-title">Social Media</ion-footer>
+    </ion-card>
+  
+    <ion-card (click)="goToLocation()">
+      <img src="assets/imgs/Penguins.jpg"/>
+      <ion-footer class="card-title">Location</ion-footer>
+    </ion-card>
+  
+    <ion-card (click)="goToGallery()">
+        <img src="assets/imgs/Penguins.jpg"/>
+        <ion-footer class="card-title">Gallery</ion-footer>
+      </ion-card>
+    
+  </ion-content>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
-</ion-content>
+
+
+
+
+<!-- <ion-content padding>
+  <ion-buttons end>
+      <button ion-button icon-only (click)="goToProfile()">
+        <ion-icon name="person"></ion-icon>
+      </button>
+  </ion-buttons>
+</ion-content> -->

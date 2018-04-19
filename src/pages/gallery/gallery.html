@@ -1,0 +1,27 @@
+<!--
+  Generated template for the GalleryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Gallery</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-card *ngFor="let picture of photoList">
+        <img src={{picture?.picture}} imageViewer/>
+        <ion-card-content>
+          <ion-card-title>
+            {{picture?.name}}
+            </ion-card-title>
+        </ion-card-content>
+      </ion-card>
+
+</ion-content>
