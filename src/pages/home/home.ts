@@ -33,10 +33,13 @@ export class HomePage {
   }
   
 
-  logout() {
-    this.authProvider.logoutUser();
-    this.navCtrl.push("LoginPage");
+  logOut(): void {
+    this.authProvider.logoutUser().then(() => {
+    this.navCtrl.setRoot("LoginPage");
     console.log("logged out")
-  }
+      });
+    }
+    
+  
 
 }
