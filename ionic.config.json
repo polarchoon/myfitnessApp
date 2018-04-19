@@ -1,6 +1,6 @@
 {
   "name": "myfitnessApp",
-  "app_id": "",
+  "app_id": "f64f1c91",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
