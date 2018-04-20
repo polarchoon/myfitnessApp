@@ -21,7 +21,7 @@ export class HomePage {
   }
 
   goToFindClass(){
-    this.navCtrl.push("FindClassPage");
+    this.navCtrl.push("ClassPage");
   }
 
   goToLocation(){
@@ -32,6 +32,12 @@ export class HomePage {
     this.navCtrl.push("GalleryPage");
   }
   
+  goToMyClass(){
+    this.navCtrl.push("MyclassPage");
+  }
+  
+  
+
 
   logOut(): void {
     this.authProvider.logoutUser().then(() => {

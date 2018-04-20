@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { FindClassPage } from './find-class';
+import { JoinClassPage } from './join-class';
 
 @NgModule({
   declarations: [
-    FindClassPage,
+    JoinClassPage,
   ],
   imports: [
-    IonicPageModule.forChild(FindClassPage),
+    IonicPageModule.forChild(JoinClassPage),
   ],
 })
-export class FindClassPageModule {}
+export class JoinClassPageModule {}

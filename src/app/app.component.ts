@@ -6,9 +6,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AuthProvider } from "../providers/auth/auth";
 
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+//import { ListPage } from '../pages/list/list';
 import { ProfilePage } from '../pages/profile/profile';
-// import { LoginPage } from '../pages/login/login';
+import { SocialPage } from '../pages/social/social';
 
 import { firebaseConfig } from './credentials';
 import firebase from 'firebase';
@@ -27,10 +27,6 @@ export class MyApp {
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen,  public authProvider: AuthProvider) {
     platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
-      statusBar.styleDefault();
-      splashScreen.hide();
       firebase.initializeApp(firebaseConfig)
 
       const unsubscribe = firebase.auth().onAuthStateChanged(user => {
@@ -43,11 +39,16 @@ export class MyApp {
           unsubscribe();
         }
       });
+      // Okay, so the platform is ready and our plugins are available.
+      // Here you can do any higher level native things you might need.
+      statusBar.styleDefault();
+      splashScreen.hide();
+
     });
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage, icon:"md-home" },
-      { title: 'Support', component: ListPage, icon:"md-call" },
+      { title: 'Social Media', component: SocialPage, icon:"md-call" },
       { title: 'Profile', component: ProfilePage, icon:"md-person" },
       // { title: 'Logout', component: LoginPage, icon:"md-log-out" }
     ];

@@ -1,0 +1,41 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Class List</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <!-- category select -->
+  <ion-item>
+    <ion-label>Select Category</ion-label>
+    <ion-select [(ngModel)]="classCategory" name="classCategory">
+      <ion-option (ionSelect)="optionCategorySelected($event)" *ngFor="let category of categories$ | async" [value]="category">{{category.name}} </ion-option>
+    </ion-select>
+  </ion-item>
+
+
+  <ion-list>
+
+    <ion-item *ngFor="let class of eventSource" (click)="goToClassDetail(class.id)">
+
+        <h2>title:
+          <strong>{{class?.title}}</strong>
+        </h2>
+        <p>Trainer:
+          <strong>{{class?.trainer}}</strong>
+        </p>
+        <p>Category:
+          <strong>{{class?.category}}</strong>
+        </p>
+        <p>Date:
+          <strong>{{class?.startTime | date:'dd/MM/yyyy'}}</strong>
+        </p>
+
+      </ion-item>
+
+  </ion-list>
+
+</ion-content>
