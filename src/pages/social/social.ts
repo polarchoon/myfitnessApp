@@ -26,7 +26,7 @@ export class SocialPage {
   }
 
   openPage(url){
-    const browser = this.iab.create(url,'_self');
+    const browser = this.iab.create(url,'_self','location=no,toolbar=yes');
     browser.show()
   }
 
